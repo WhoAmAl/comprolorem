@@ -3,7 +3,12 @@
 	import Header from '../components/Header.svelte';
 	import Herosection from '../components/Herosection.svelte';
 	import { Card, CardContent } from '$lib/components/ui/card';
-	import { Camera, Phone, Mail } from '@lucide/svelte';
+	import { Camera, Phone, Mail, MessageSquare } from '@lucide/svelte';
+	import * as Accordion from '$lib/components/ui/accordion';
+	import { slide } from 'svelte/transition';
+	import { cubicOut } from 'svelte/easing';
+
+	let showFaq = false;
 
 	const contacts = [
 		{
@@ -17,6 +22,29 @@
 			role: 'Role Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 			phone: '+1012 3456 789',
 			email: 'demo@gmail.com'
+		}
+	];
+
+	const faqs = [
+		{
+			q: 'The expense windows adapted sir. Wrong widen drawn.',
+			a: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum congue metus sit amet volutpat. Integer suscipit gravida diam id feugiat. Nulla at efficitur magna, et sodales velit.'
+		},
+		{
+			q: 'Six curiosity day assurance bed necessary?',
+			a: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum congue metus sit amet volutpat. Integer suscipit gravida diam id feugiat. Nulla at efficitur magna, et sodales velit.'
+		},
+		{
+			q: 'Produce say the ten moments parties?',
+			a: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum congue metus sit amet volutpat. Integer suscipit gravida diam id feugiat. Nulla at efficitur magna, et sodales velit.'
+		},
+		{
+			q: 'Simple innate summer fat appear basket his desire joy?',
+			a: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum congue metus sit amet volutpat. Integer suscipit gravida diam id feugiat. Nulla at efficitur magna, et sodales velit.'
+		},
+		{
+			q: 'Outward mindset promise at gravity do excited?',
+			a: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum congue metus sit amet volutpat. Integer suscipit gravida diam id feugiat. Nulla at efficitur magna, et sodales velit.'
 		}
 	];
 </script>
@@ -78,6 +106,61 @@
 			</Card>
 		{/each}
 	</div>
+	<section class="w-full bg-[#2d2d2d] py-4">
+		<div class="mx-auto mb-6 flex items-center justify-center gap-4 md:w-[60%]">
+			<p class="text-sm font-bold text-neutral-200">Have Probable Common Question?</p>
 
+			<button
+				on:click={() => (showFaq = !showFaq)}
+				class="rounded-full bg-black px-12 py-2 text-xs text-white"
+			>
+				{showFaq ? 'Close FAQ' : 'FAQ'}
+			</button>
+		</div>
+
+		{#if showFaq}
+			<div
+				in:slide={{ duration: 250, easing: cubicOut }}
+				out:slide={{ duration: 200, easing: cubicOut }}
+				class="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 md:grid-cols-3"
+			>
+				<div class="md:col-span-2">
+					<Accordion.Root type="single" class="space-y-3">
+						{#each faqs as faq, i}
+							<Accordion.Item value={`item-${i}`} class="rounded-md bg-neutral-100">
+								<Accordion.Trigger
+									class="flex w-full items-center justify-between px-6 py-4 text-left font-semibold"
+								>
+									{faq.q}
+								</Accordion.Trigger>
+
+								<Accordion.Content class="px-6 pb-5 text-sm text-neutral-600">
+									{faq.a}
+								</Accordion.Content>
+							</Accordion.Item>
+						{/each}
+					</Accordion.Root>
+				</div>
+
+				<div class="flex flex-col justify-between rounded-lg bg-neutral-100 p-8">
+					<div class="flex flex-col items-center gap-4">
+						<MessageSquare size={55} class="mx-auto" />
+
+						<h3 class="mb-3 text-lg font-semibold">Do you have more questions?</h3>
+
+						<p class="text-sm text-neutral-600">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam bibendum congue metus
+							sit amet volutpat. Integer suscipit gravida diam id feugiat. Nulla at efficitur magna,
+							et sodales velit.
+						</p>
+					</div>
+
+					<button class="mt-10 w-full bg-neutral-800 py-3 text-sm text-white hover:bg-black">
+						Shoot a Direct Mail
+					</button>
+				</div>
+			</div>
+		{/if}
+	</section>
 	<Footer />
 </section>

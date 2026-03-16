@@ -9,6 +9,10 @@ node_modules/*
 .wrangler
 /.svelte-kit
 /build
+.prettierignore
+.gitignore
+.GEMINI.md
+.AGENTS.md
 
 # OS
 .DS_Store
