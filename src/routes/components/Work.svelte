@@ -1,24 +1,8 @@
 <script>
-	const works = [
-		{
-			title: 'Lorem ipsum dolor sit amet',
-			description:
-				'Highlighted Event we have participated, increasing more engagement and social features to agenda we work with.',
-			image: 'headerfull.webp'
-		},
-		{
-			title: 'Lorem ipsum dolor sit amet',
-			description:
-				'Highlighted Event we have participated, increasing more engagement and social features to agenda we work with.',
-			image: 'headerfull.webp'
-		},
-		{
-			title: 'Lorem ipsum dolor sit amet',
-			description:
-				'Highlighted Event we have participated, increasing more engagement and social features to agenda we work with.',
-			image: 'headerfull.webp'
-		}
-	];
+	import { works } from '$lib/data/work';
+	import { goto } from '$app/navigation';
+
+	const limitedWorks = works.slice(0, 3);
 </script>
 
 <div
@@ -33,15 +17,18 @@
 	</p>
 
 	<div class="flex w-[90%] flex-col items-center justify-around gap-2 md:flex-row">
-		{#each works as work}
-			<div class="flex w-full flex-col justify-around gap-3 md:w-1/3">
+		{#each limitedWorks as work}
+			<div
+				class="flex w-full flex-col justify-around gap-3 md:w-1/3"
+				on:click={() => goto(`/work/${work.slug}`)}
+			>
 				<img src={work.image} alt={work.title} class="h-auto w-full object-cover" />
 
 				<h1 class="text-lg font-bold uppercase">
 					{work.title}
 				</h1>
 
-				<p class="text-xs font-light">
+				<p class="truncate text-xs font-light">
 					{work.description}
 				</p>
 			</div>
