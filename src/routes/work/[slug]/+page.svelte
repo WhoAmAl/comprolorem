@@ -6,6 +6,10 @@
 
 	export let data;
 	const { work } = data;
+
+	function goBack() {
+		history.back();
+	}
 </script>
 
 <div class="mx-auto flex min-h-screen max-w-7xl flex-col text-black">
@@ -29,7 +33,7 @@
 	</div>
 	<Button
 		class=" mr-5 ml-auto w-fit rounded-none border-none bg-transparent text-neutral-950 hover:bg-neutral-300"
-		><ArrowLeft /> Back</Button
+		onclick={goBack}><ArrowLeft /> Back</Button
 	>
 	<Footer />
 </div>
