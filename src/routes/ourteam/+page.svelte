@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { Carousel, CarouselContent, CarouselItem } from '$lib/components/ui/carousel';
-	import Footer from '../components/Footer.svelte';
-	import Header from '../components/Header.svelte';
-	import Herosection from '../components/Herosection.svelte';
+	import Footer from '$lib/components/sections/Footer.svelte';
+	import Header from '$lib/components/sections/Header.svelte';
+	import Herosection from '$lib/components/sections/Herosection.svelte';
 
 	const team = [
 		{

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Footer from '../components/Footer.svelte';
-	import Header from '../components/Header.svelte';
-	import Herosection from '../components/Herosection.svelte';
+	import Footer from '$lib/components/sections/Footer.svelte';
+	import Header from '$lib/components/sections/Header.svelte';
+	import Herosection from '$lib/components/sections/Herosection.svelte';
 	import { Card, CardContent } from '$lib/components/ui/card';
 	import { Camera, Phone, Mail, MessageSquare } from '@lucide/svelte';
 	import * as Accordion from '$lib/components/ui/accordion';

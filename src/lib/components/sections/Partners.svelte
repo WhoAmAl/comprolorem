@@ -1,6 +1,8 @@
 <script>
 	import emblaCarouselSvelte from 'embla-carousel-svelte';
 	import AutoScroll from 'embla-carousel-auto-scroll';
+	import { partners } from '$lib/data/partners';
+	import { goto } from '$app/navigation';
 
 	const options = {
 		loop: true
@@ -12,18 +14,6 @@
 			stopOnInteraction: false,
 			stopOnMouseEnter: true
 		})
-	];
-	const partners = [
-		{ logo: 'Scribtware.webp', name: 'Scribtware' },
-		{ logo: 'Scribtware.webp', name: 'Scribtware' },
-		{ logo: 'Scribtware.webp', name: 'Scribtware' },
-		{ logo: 'Scribtware.webp', name: 'Scribtware' },
-		{ logo: 'Scribtware.webp', name: 'Scribtware' },
-		{ logo: 'Scribtware.webp', name: 'Scribtware' },
-		{ logo: 'Scribtware.webp', name: 'Scribtware' },
-		{ logo: 'Scribtware.webp', name: 'Scribtware' },
-		{ logo: 'Scribtware.webp', name: 'Scribtware' },
-		{ logo: 'Scribtware.webp', name: 'Scribtware' }
 	];
 </script>
 
@@ -40,9 +30,12 @@
 		class="mt-4 flex w-full flex-row items-center justify-around overflow-hidden"
 		use:emblaCarouselSvelte={{ options, plugins }}
 	>
-		<div class="flex items-center gap-4">
+		<div class="flex w-full items-center justify-around gap-4">
 			{#each partners as partner}
-				<div class="flex flex-[0_0_50%] justify-center md:flex-[0_0_20%]">
+				<div
+					onclick={() => goto(`/partners/${partner.slug}`)}
+					class="flex flex-[0_0_50%] justify-center md:flex-[0_0_20%]"
+				>
 					<img src={partner.logo} alt={partner.name} class="w-45 object-contain" />
 				</div>
 			{/each}

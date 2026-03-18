@@ -1,7 +1,7 @@
 <script>
 	import Button from '$lib/components/ui/button/button.svelte';
-	import Footer from '../../components/Footer.svelte';
-	import Header from '../../components/Header.svelte';
+	import Footer from '$lib/components/sections/Footer.svelte';
+	import Header from '$lib/components/sections/Header.svelte';
 	import { ArrowLeft } from '@lucide/svelte';
 
 	export let data;

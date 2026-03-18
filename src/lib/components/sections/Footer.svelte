@@ -10,13 +10,10 @@
 		{ icon: Figma, href: '#' }
 	];
 
-	// const useCases = ['Web-designers', 'Marketers', 'Small Business', 'Website Builder'];
-
 	const company = ['Partners', 'Our Work', 'Service', 'Testimonials', 'Contact Us'];
 </script>
 
 <footer class="mt-auto w-full bg-black px-6 py-12 text-white">
-	<!-- Follow Us -->
 	<div class="mb-16 flex flex-col items-center gap-4">
 		<p class="text-sm text-gray-300">Follow us</p>
 
