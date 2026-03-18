@@ -4,7 +4,7 @@
 	import Button from '../ui/button/button.svelte';
 </script>
 
-<section class="mt-16 flex w-full flex-col items-center justify-center">
+<section class="mt-16 flex w-full flex-col items-center justify-center px-5">
 	<div class="flex w-full items-center justify-between">
 		<div>
 			<h2 class="text-xl font-semibold">Our Partners</h2>
@@ -28,6 +28,8 @@
 	</div>
 	<Button
 		class="mx-auto w-fit cursor-pointer rounded-none border-none bg-transparent text-neutral-950 shadow-none hover:bg-transparent"
-		href="/partners">More<ArrowRight /></Button
+		href="/partners"
 	>
+		More<ArrowRight />
+	</Button>
 </section>

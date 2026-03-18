@@ -2,7 +2,7 @@
 	import Button from '$lib/components/ui/button/button.svelte';
 </script>
 
-<section class="mt-20 bg-neutral-100 p-10 shadow-sm">
+<section class="mt-20 bg-neutral-100 px-5 py-10 shadow-sm md:px-10">
 	<div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
 		<div>
 			<h2 class="mt-2 text-2xl font-semibold">Become Our Partner</h2>
