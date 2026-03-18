@@ -8,10 +8,6 @@
 
 	export let data;
 	$: partner = data.partner;
-
-	function goBack() {
-		history.back();
-	}
 </script>
 
 <div class="mx-auto flex min-h-screen max-w-7xl flex-col text-black">
@@ -62,7 +58,7 @@
 	</div>
 	<Button
 		class="mt-auto mr-5 ml-auto w-fit rounded-none border-none bg-transparent px-10 text-neutral-950 hover:bg-neutral-300"
-		onclick={goBack}><ArrowLeft /> Back</Button
+		href="/partners"><ArrowLeft /> Back to Partners</Button
 	>
 	<BecomePartner />
 	<OurPartner />
