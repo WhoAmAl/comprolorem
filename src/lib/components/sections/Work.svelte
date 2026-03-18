@@ -19,7 +19,7 @@
 	<div class="flex w-[90%] flex-col items-center justify-around gap-2 md:flex-row">
 		{#each limitedWorks as work}
 			<div
-				class="flex w-full flex-col justify-around gap-3 md:w-1/3"
+				class="flex w-full cursor-pointer flex-col justify-around gap-3 transition-all hover:-translate-y-3 md:w-1/3"
 				on:click={() => goto(`/work/${work.slug}`)}
 			>
 				<img src={work.image} alt={work.title} class="h-auto w-full object-cover" />

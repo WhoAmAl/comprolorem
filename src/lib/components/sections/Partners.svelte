@@ -34,7 +34,7 @@
 			{#each partners as partner}
 				<div
 					onclick={() => goto(`/partners/${partner.slug}`)}
-					class="flex flex-[0_0_50%] justify-center md:flex-[0_0_20%]"
+					class="flex flex-[0_0_50%] cursor-pointer justify-center md:flex-[0_0_20%]"
 				>
 					<img src={partner.logo} alt={partner.name} class="w-45 object-contain" />
 				</div>

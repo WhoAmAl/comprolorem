@@ -7,7 +7,7 @@
 	import BecomePartner from './components/BecomePartner.svelte';
 
 	export let data;
-	const { partner } = data;
+	$: partner = data.partner;
 
 	function goBack() {
 		history.back();
