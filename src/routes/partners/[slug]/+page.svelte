@@ -7,11 +7,7 @@
 	import BecomePartner from './components/BecomePartner.svelte';
 
 	export let data;
-	const { partner } = data;
-
-	function goBack() {
-		history.back();
-	}
+	$: partner = data.partner;
 </script>
 
 <div class="mx-auto flex min-h-screen max-w-7xl flex-col text-black">
@@ -62,7 +58,7 @@
 	</div>
 	<Button
 		class="mt-auto mr-5 ml-auto w-fit rounded-none border-none bg-transparent px-10 text-neutral-950 hover:bg-neutral-300"
-		onclick={goBack}><ArrowLeft /> Back</Button
+		href="/partners"><ArrowLeft /> Back to Partners</Button
 	>
 	<BecomePartner />
 	<OurPartner />
