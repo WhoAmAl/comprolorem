@@ -1,7 +1,7 @@
 export const partners = [
 	{
 		slug: 'Scribtware-a',
-		name: 'Scribtware',
+		name: 'Scribtware A',
 		logo: '/Scribtware.webp',
 		wideimage: '/Scribtware.webp',
 		status: 'Main Partner',
@@ -17,7 +17,7 @@ export const partners = [
 	},
 	{
 		slug: 'Scribtware-b',
-		name: 'Scribtware',
+		name: 'Scribtware B',
 		logo: '/Scribtware.webp',
 		wideimage: '/Scribtware.webp',
 		status: 'Business Partner',
@@ -33,7 +33,7 @@ export const partners = [
 	},
 	{
 		slug: 'Scribtware-c',
-		name: 'Scribtware',
+		name: 'Scribtware C',
 		logo: '/Scribtware.webp',
 		wideimage: '/Scribtware.webp',
 		status: 'Business Partner',
@@ -49,7 +49,7 @@ export const partners = [
 	},
 	{
 		slug: 'Scribtware-d',
-		name: 'Scribtware',
+		name: 'Scribtware D',
 		logo: '/Scribtware.webp',
 		wideimage: '/Scribtware.webp',
 		status: 'Business Partner',
@@ -65,7 +65,7 @@ export const partners = [
 	},
 	{
 		slug: 'Scribtware-e',
-		name: 'Scribtware',
+		name: 'Scribtware E',
 		logo: '/Scribtware.webp',
 		wideimage: '/Scribtware.webp',
 		status: 'Event Partner',
@@ -81,7 +81,7 @@ export const partners = [
 	},
 	{
 		slug: 'Scribtware-f',
-		name: 'Scribtware',
+		name: 'Scribtware F',
 		logo: '/Scribtware.webp',
 		wideimage: '/Scribtware.webp',
 		status: 'Event Partner',
@@ -97,7 +97,7 @@ export const partners = [
 	},
 	{
 		slug: 'Scribtware-g',
-		name: 'Scribtware',
+		name: 'Scribtware G',
 		logo: '/Scribtware.webp',
 		wideimage: '/Scribtware.webp',
 		status: 'Event Partner',
@@ -113,7 +113,7 @@ export const partners = [
 	},
 	{
 		slug: 'Scribtware-h',
-		name: 'Scribtware',
+		name: 'Scribtware H',
 		logo: '/Scribtware.webp',
 		wideimage: '/Scribtware.webp',
 		status: 'Event Partner',
@@ -128,8 +128,8 @@ export const partners = [
 		}
 	},
 	{
-		slug: 'Scribtware-h',
-		name: 'Scribtware',
+		slug: 'Scribtware-i',
+		name: 'Scribtware I',
 		logo: '/Scribtware.webp',
 		wideimage: '/Scribtware.webp',
 		status: 'Event Partner',
