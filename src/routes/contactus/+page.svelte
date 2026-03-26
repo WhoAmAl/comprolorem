@@ -49,7 +49,7 @@
 	];
 </script>
 
-<section class="mx-auto min-h-screen max-w-7xl">
+<section class="mx-auto min-h-screen">
 	<Header />
 	<Herosection />
 	<!-- Description -->

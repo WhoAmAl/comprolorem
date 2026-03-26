@@ -66,7 +66,7 @@
 	const evenMembers = people.filter((_, i) => i % 2 === 1);
 </script>
 
-<section class="mx-auto max-w-7xl text-neutral-950">
+<section class="mx-auto text-neutral-950">
 	<Header />
 	<Herosection />
 

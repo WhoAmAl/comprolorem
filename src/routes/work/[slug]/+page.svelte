@@ -12,7 +12,7 @@
 	}
 </script>
 
-<div class="mx-auto flex min-h-screen max-w-7xl flex-col text-black">
+<div class="mx-auto flex min-h-screen flex-col text-black">
 	<Header />
 	<div class="mx-auto max-w-5xl px-6 py-16">
 		<!-- Image -->

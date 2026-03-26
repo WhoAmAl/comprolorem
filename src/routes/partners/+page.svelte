@@ -12,7 +12,7 @@
 	}));
 </script>
 
-<section class="mx-auto flex min-h-screen max-w-7xl flex-col text-neutral-950">
+<section class="mx-auto flex min-h-screen flex-col text-neutral-950">
 	<Header />
 	<Herosection />
 

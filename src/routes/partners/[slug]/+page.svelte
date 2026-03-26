@@ -10,7 +10,7 @@
 	$: partner = data.partner;
 </script>
 
-<div class="mx-auto flex min-h-screen max-w-7xl flex-col text-black">
+<div class="mx-auto flex min-h-screen flex-col text-black">
 	<Header />
 	<div class="w-full px-6 py-10">
 		<div class="flex flex-col gap-10 lg:flex-row lg:items-center">

@@ -9,7 +9,7 @@
 	import Header from '$lib/components/sections/Header.svelte';
 </script>
 
-<div class="mx-auto flex max-w-7xl flex-col items-center justify-center text-neutral-950">
+<div class="mx-auto flex flex-col items-center justify-center text-neutral-950">
 	<Header />
 	<Herosection />
 	<Partners />
